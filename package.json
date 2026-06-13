@@ -1,0 +1,23 @@
+{
+  "name": "spa-rdc-backend",
+  "version": "1.0.0",
+  "description": "Backend API Service for SPA RDC Smart Parts Authentication",
+  "main": "server.js",
+  "type": "module",
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "better-sqlite3": "^12.10.0",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "qrcode": "^1.5.4"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
