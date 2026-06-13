@@ -34,14 +34,16 @@ let IS_LOCAL_DEV = APP_PUBLIC_URL.includes('localhost');
   //return `${baseUrl}/verification/${token}`;
 //}
 
+function getPublicVerifyUrl(token) {
+  const baseUrl = process.env.APP_PUBLIC_URL || process.env.FRONTEND_URL;
+  return `${baseUrl}/verification/${token}`;
+}
+
 // function getPublicVerifyUrl(token) {
 //   const baseUrl = APP_PUBLIC_URL || FRONTEND_URL;
 //   return `${baseUrl}/api/public/verification/${token}`;
 // }
-function getPublicVerifyUrl(token) {
-  const baseUrl = FRONTEND_URL;
-  return `${baseUrl}/verification/${token}`;
-}
+
 
 app.use(express.json());
 
