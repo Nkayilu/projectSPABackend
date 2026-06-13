@@ -29,9 +29,14 @@ let IS_LOCAL_DEV = APP_PUBLIC_URL.includes('localhost');
 
 
 // Construit l'URL de vérification publique complète pour le QR Code
+//function getPublicVerifyUrl(token) {
+ // const baseUrl = APP_PUBLIC_URL || FRONTEND_URL;
+  //return `${baseUrl}/verification/${token}`;
+//}
+
 function getPublicVerifyUrl(token) {
   const baseUrl = APP_PUBLIC_URL || FRONTEND_URL;
-  return `${baseUrl}/verification/${token}`;
+  return `${baseUrl}/api/public/verification/${token}`;
 }
 
 app.use(express.json());
